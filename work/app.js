@@ -79,7 +79,7 @@ let dt=1;
 do{
     console.log(dt);
     dt++
-}while(dt<=7);
+}while(dt<=20);
 
 
 for (i=0;i<10;i++){
@@ -89,14 +89,9 @@ for (i=0;i<10;i++){
     console.log(i)
 }
 
-
-
-
-
-
-
-
 let numberOfSerie=+prompt('Nechta oyin kordingiz?', "" );
+
+
 const SeriesDb={
     count:numberOfSerie,
     series:{},
@@ -105,137 +100,21 @@ const SeriesDb={
     private:false,
 };
 
+
+
+
+
+
 for(i=0;i<2;i++){
 const a=prompt('oxirgi marta korgan serializ?'),
 b=prompt('va uni qanchalik baholisiz?');
 if(a!=null && b!=null && a!="" && b!=""){
 SeriesDb.series[a]=b;
-console.log('Done');
-}else{
-    console.log('Error!');
-    i--
+console.log('Done')
 }
 }
 console.log(SeriesDb)
-
-//while option
-// let t=0;
-// while(t<2){
-//     const a=prompt('oxirgi marta korgan serializ?'),
-// b=prompt('va uni qanchalik baholisiz?');
-// if(a!=null && b!=null && a!="" && b!=""){
-// SeriesDb.series[a]=b;
-// console.log('Done');
-// }else{
-//     console.log('Error!');
-//     t--
-// }
-// t++
-// }
-
-//do while option
-// let t=0;
-// do{const a=prompt('oxirgi marta korgan serializ?'),
-// b=prompt('va uni qanchalik baholisiz?');
-// if(a!=null && b!=null && a!="" && b!=""){
-// SeriesDb.series[a]=b;
-// console.log('Done');
-// }else{
-//     console.log('Error!');
-//     t--
-// }
-// t++   
-// }while(t<2);
-// console.log(SeriesDb)
-
-
-
-
-
-
-if(SeriesDb.count<5){
-    console.log('kamu ukam')
-}else if(SeriesDb.count >=5 && SeriesDb.count<10){
-    console.log('normku uka')
-}else if(SeriesDb.count>=10){
-    console.log('wuncha vohta maraz')
-}else{
-    console.log('error')
-}
       
-
-
-
-function calc1(a,b){
-    console.log(a+b)
-}
-
-calc1(44,66)
-
-function sfn(name, surname){
-    console.log(`hello my full name is ${name} ${surname}`);
-}
-
-sfn('Muxiddin', 'Mirxamidov');
-
-// func decloration
-function calcw(a,b){
-    return a+b
-};
-
-let all=calcw(7,9);
-console.log(all)
-
-
-
-// func expression
-let func=function() {
-    console.log('ure suck')
-}
-
-func();
-
-
-// arrow 
-
-let ior=(a,b)=>{
-    console.log(a+b)
-}
-ior(4,88);
-
-const uyu=[1,2,3,4,5,6,7,89,]
-console.log(uyu.length)
-console.log(uyu[7])
-
-uyu[4]='d';
-console.log(uyu)
-
-const user='muxiddin';
-console.log(user.length)
-console.log(user[5])
-console.log(user.toUpperCase())
-let up=user.toUpperCase();
-console.log(up);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
