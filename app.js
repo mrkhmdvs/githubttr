@@ -23,12 +23,16 @@ console.log(num);
 
 
 
+function oldd(){
+    let qst=+prompt('h old are u?', "")
+    let hy=1;
+    let hyut=qst+hy;
+    let gth=alert(`kengi yili yoshiz ${hyut}ga toladi`)
+}
+oldd()
 
 
 
-let qst=prompt('h old are u?', "")
-
-let gth=alert(`sizi yashiz ${qst}`)
 
 const age1=+prompt('how old are uuuuuuu?')
 
@@ -96,27 +100,6 @@ for (i=0;i<10;i++){
 
 
 
-let numberOfSerie=+prompt('Nechta oyin kordingiz?', "" );
-const SeriesDb={
-    count:numberOfSerie,
-    series:{},
-    actors:{},
-    genres:[],
-    private:false,
-};
-
-for(i=0;i<2;i++){
-const a=prompt('oxirgi marta korgan serializ?'),
-b=prompt('va uni qanchalik baholisiz?');
-if(a!=null && b!=null && a!="" && b!=""){
-SeriesDb.series[a]=b;
-console.log('Done');
-}else{
-    console.log('Error!');
-    i--
-}
-}
-console.log(SeriesDb)
 
 //while option
 // let t=0;
@@ -153,16 +136,7 @@ console.log(SeriesDb)
 
 
 
-if(SeriesDb.count<5){
-    console.log('kamu ukam')
-}else if(SeriesDb.count >=5 && SeriesDb.count<10){
-    console.log('normku uka')
-}else if(SeriesDb.count>=10){
-    console.log('wuncha vohta maraz')
-}else{
-    console.log('error')
-}
-      
+
 
 
 
@@ -213,28 +187,148 @@ console.log(uyu)
 const user='muxiddin';
 console.log(user.length)
 console.log(user[5])
-console.log(user.toUpperCase())
+console.log(user.toUpperCase()) 
 let up=user.toUpperCase();
 console.log(up);
+console.log(user.indexOf('a'));
+console.log(user.slice(4));
+console.log(user.substring(0,5));
+console.log(user.substr(6,5));
 
 
 
+//lowercase,to string,indexof,slice(it means cutting),substring(similar with slice), substr (это короче братишка этих парней первый значние начинает второй типо до) 
+
+
+const num11=8.3;
+console.log(Math.round(num11))
+
+const er='13.8px'
+console.log(parseInt(er))
+console.log(parseFloat(er))
+
+
+//math.round(округлит номер),parseint(cholo soni eng minimal ga tuwuradi)parsefloat bu koroche texti soni chqazb beradi
 
 
 
+let numberOfSerie;
+
+function sApp(){
+    numberOfSerie =+prompt('Nechta serial korgansiz?', "" );
+
+    while(
+        numberOfSerie=="" ||
+        numberOfSerie==null ||
+        isNaN(numberOfSerie)
+    ){
+        numberOfSerie =+prompt('Nechta serial korgansiz?', "" );
+    }
+}
+ sApp();
+
+const SeriesDb={
+    count:numberOfSerie,
+    series:{},
+    actors:{},
+    genres:[],
+    private:false,
+};
+
+function Myseries(){
+    
+    for(i=0;i<2;i++){
+    const a=prompt('oxirgi marta korgan serializ?'),
+    b=prompt('va uni qanchalik baholisiz?');
+    if(a!=null && b!=null && a!="" && b!=""){
+    SeriesDb.series[a]=b;
+    console.log('Done');
+    }else{
+        console.log('Error!');
+        i--
+    }
+    }
+
+}
+ Myseries();
+
+// function numSerRate(){
+//     if(SeriesDb.count<5){
+//         console.log('kamu ukam')
+//     }else if(SeriesDb.count >=5 && SeriesDb.count<10){
+//         console.log('normku uka')
+//     }else if(SeriesDb.count>=10){
+//         console.log('wuncha vohta maraz')
+//     }else{
+//         console.log('error')
+//     }
+
+// }
+//  numSerRate();
+
+function numSerRate(countz){
+    if(countz<5){
+        console.log('kamu ukam')
+    }else if(countz >=5 && countz<10){
+        console.log('normku uka')
+    }else if(countz>=10){
+        console.log('wuncha vohta maraz')
+    }else{
+        console.log('error')
+    }
+}
+ numSerRate(SeriesDb.count);
+ 
+function xuyo(){
+    let error=('404 page is not found')
+    if(SeriesDb.private !=true){
+        console.log(SeriesDb);
+    }else{console.log(error)
+        
+    }
+}
+
+xuyo();
+ 
+//tepadi xuyo functionikamro varianti
+// function shdb(){
+//     if(!SeriesDb.private){
+//         console.log(SeriesDb);
+//     }
+// }
+
+// shdb()
 
 
+// 2 variant
+// function shdb(hidden){
+//     if(!hidden){
+//         console.log(SeriesDb.private)
+//     }
+// }
+
+// shdb(SeriesDb.private)
 
 
+function wGenres(){
+    for(i=0;i<=2;i++){
+        let ask=prompt(`ur fav genres ${i+1}`);
+        SeriesDb.genres[i]=ask
+    }
+}
+wGenres();
 
 
+function edu(subject,callback){
+    console.log(`i will teach u${subject}`);
+    callback();
+}
 
+function done(){
+    console.log('GREAT MF')
+}
 
-
-
-
-
-
+edu('JS',done)
 
 
 
