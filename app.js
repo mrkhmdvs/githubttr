@@ -321,7 +321,7 @@ wGenres();
 
 function edu(subject,callback){
     console.log(`i will teach u${subject}`);
-    callback();
+    callback();    // if we delete this it will not show great mf
 }
 
 function done(){
@@ -331,12 +331,35 @@ function done(){
 edu('JS',done)
 
 
+function first(cb){
+    //code
+    setTimeout(()=>{
+        console.log(111);
+        cb();
+    },5000);
+}
 
+function second(){
+    //code
+    console.log(222);
+}
 
+first(second);
 
+let thief={
+    jacket:"black",
+    height:1.7,
+    color:{
+        hair:"white",
+        skin:"black",
+    },
+};
 
+console.log(Object.keys(thief).length);
 
-
+for(let keys in thief){
+    console.log(`the object has ${keys} with value ${thief[keys]}`)
+}
 
 
 
