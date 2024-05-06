@@ -332,26 +332,26 @@
 
 
 // OOP//
-const car={
-    motor:'x',
-    color:'red',
-    logo:'mercedes',
-    lyuk:true,
-    speed:function(){
-        console.log(320)
-    }
-}
+// const car={
+//     motor:'x',
+//     color:'red',
+//     logo:'mercedes',
+//     lyuk:true,
+//     speed:function(){
+//         console.log(320)
+//     }
+// }
 
-const gm={
-    speed:120
-}
-Object.setPrototypeOf(gm, car)
+// const gm={
+//     speed:120
+// }
+// Object.setPrototypeOf(gm, car)
 
-console.log(gm)
+// console.log(gm)
 
 
-let bmw=Object.create(car)
-console.log(bmw)
+// let bmw=Object.create(car)
+// console.log(bmw)
 
 
 
@@ -366,100 +366,238 @@ console.log(bmw)
 
     
     
-    const SeriesDb={
-        count:0,
-        series:{},
-        actors:{},
-        genres:[],
-        private:false,
-        start: ()=>{
-            SeriesDb.count=+prompt('Nechta serial korgansiz?', "" );
+//     const SeriesDb={
+//         count:0,
+//         series:{},
+//         actors:{},
+//         genres:[],
+//         private:false,
+//         start: ()=>{
+//             SeriesDb.count=+prompt('Nechta serial korgansiz?', "" );
     
-            while(
-                SeriesDb.count=="" ||
-                SeriesDb.count==null ||
-                isNaN(SeriesDb.count)
-                ){
-                    SeriesDb.count =+prompt('Nechta serial korgansiz?', "" );
-            }
-        }
-    };
+//             while(
+//                 SeriesDb.count=="" ||
+//                 SeriesDb.count==null ||
+//                 isNaN(SeriesDb.count)
+//                 ){
+//                     SeriesDb.count =+prompt('Nechta serial korgansiz?', "" );
+//             }
+//         }
+//     };
     
-    function Myseries(){
+//     function Myseries(){
         
-        for(i=0;i<2;i++){
-        const a=prompt('oxirgi marta korgan serializ?'),
-        b=prompt('va uni qanchalik baholisiz?');
-        if(a!=null && b!=null && a!="" && b!=""){
-        SeriesDb.series[a]=b;
-        console.log('Done');
-    }else{
-        console.log('Error!');
-        i--
-        }
-        }
+//         for(i=0;i<2;i++){
+//         const a=prompt('oxirgi marta korgan serializ?'),
+//         b=prompt('va uni qanchalik baholisiz?');
+//         if(a!=null && b!=null && a!="" && b!=""){
+//         SeriesDb.series[a]=b;
+//         console.log('Done');
+//     }else{
+//         console.log('Error!');
+//         i--
+//         }
+//         }
     
-    }
-     Myseries();
+//     }
+//      Myseries();
      
-     function numSerRate(countz){
-         if(countz<5){
-             console.log('kamu ukam')
-         }else if(countz >=5 && countz<10){
-             console.log('normku uka')
-         }else if(countz>=10){
-             console.log('wuncha vohta maraz')
-         }else{
-             console.log('error')
-         }
-     }
-      numSerRate(SeriesDb.count);
+//      function numSerRate(countz){
+//          if(countz<5){
+//              console.log('kamu ukam')
+//          }else if(countz >=5 && countz<10){
+//              console.log('normku uka')
+//          }else if(countz>=10){
+//              console.log('wuncha vohta maraz')
+//          }else{
+//              console.log('error')
+//          }
+//      }
+//       numSerRate(SeriesDb.count);
       
-     function xuyo(){
-         let error=('404 page is not found')
-         if(SeriesDb.private !=true){
-             console.log(SeriesDb);
-         }else{console.log(error)
+//      function xuyo(){
+//          let error=('404 page is not found')
+//          if(SeriesDb.private !=true){
+//              console.log(SeriesDb);
+//          }else{console.log(error)
              
-         }
-     }
+//          }
+//      }
      
-     xuyo();
-     let vDB =()=>{
-        if(!SeriesDb.private==true){
-            console.lo
-        }
-     }
-     //tepadi xuyo functionikamro varianti
-     // function shdb(){
-     //     if(!SeriesDb.private){
-     //         console.log(SeriesDb);
-     //     }
-     // }
+//      xuyo();
+//      let vDB =()=>{
+//         if(!SeriesDb.private==true){
+//             console.lo
+//         }
+//      }
+//      //tepadi xuyo functionikamro varianti
+//      // function shdb(){
+//      //     if(!SeriesDb.private){
+//      //         console.log(SeriesDb);
+//      //     }
+//      // }
      
-     // shdb()
-     
-     
-     // 2 variant
-     // function shdb(hidden){
-     //     if(!hidden){
-     //         console.log(SeriesDb.private)
-     //     }
-     // }
-     
-     // shdb(SeriesDb.private)
+//      // shdb()
      
      
-     function wGenres(){
-         for(i=0;i<=2;i++){
-             let ask=prompt(`ur fav genres ${i+1}`);
-             SeriesDb.genres[i]=ask
-         }
-     }
-     wGenres();
+//      // 2 variant
+//      // function shdb(hidden){
+//      //     if(!hidden){
+//      //         console.log(SeriesDb.private)
+//      //     }
+//      // }
+     
+//      // shdb(SeriesDb.private)
+     
+     
+//      function wGenres(){
+//          for(i=0;i<=2;i++){
+//              let ask=prompt(`ur fav genres ${i+1}`);
+//              SeriesDb.genres[i]=ask
+//          }
+//      }
+//      wGenres();
 
 
-const shH=()=>{
-    const heading=document.querySelector('.heading');
-    heading.textContent='ya Allah pls help me'
+// const shH=()=>{
+//     const heading=document.querySelector('.heading');
+//     heading.textContent='ya Allah pls help me'
+// }
+
+// const btn=document.querySelector('.butt')
+// btn.onclick=shH;
+
+document.addEventListener('keydown', event=>{
+    console.log('key: ' + event.key);
+    console.log('code: ' + event.code);
+}) // this is event of keyboard which button we will press it will appear on the console
+
+function sayGreeting(greeting) {
+  console.log(greeting + ', ' + this.name);
 }
+
+const person = {
+  name: 'Peter'
+};
+
+sayGreeting.call(person, 'Hello'); // Output: Hello, Peter
+
+
+
+//замыкание closures
+function makeBaker() {
+    const secretIngredient = "любовь"; // Эта переменная внутри функции пекаря (кухня)
+  
+    function bakeCake() {
+      console.log("Пеку вкусный торт с " + secretIngredient);
+    }
+  
+    return bakeCake; // Возвращаем внутреннюю функцию (помощник
+
+
+  
+  const myBaker = makeBaker();
+  myBaker();
+
+
+// Асинхронность
+console.log('start')
+console.log('really?')
+setTimeout(function(){
+    console.log('yes')
+},4000)             //нужно поставитиь ,
+console.log('im ready')
+
+// let taskStack = [];
+
+// // Функция для добавления задачи в стек
+// function addTask(task) {
+//     taskStack.push(task);
+//     console.log(`Добавлена новая задача: ${task}`);
+// }
+
+
+// // Функция для завершения задачи (удаления из стека)
+// function completeTask() {
+//     if (taskStack.length > 0) {
+//         let completedTask = taskStack.pop();
+//         console.log(`Задача "${completedTask}" завершена и удалена из списка`);
+//     } else {
+//         console.log('Нет задач для завершения');
+//     }
+// }
+
+// // Пример использования стека для управления задачами
+// addTask('Почистить кухню');
+// addTask('Погулять с собакой');
+// addTask('Записаться на курс');
+// completeTask();
+// completeTask();
+// completeTask();
+// completeTask();
+// }
+}
+let taskStack = [];
+
+// Функция для добавления задачи в стек
+function addTask(task) {
+  taskStack.push(task);
+  console.log(`Добавлена новая задача: ${task}`);
+}
+
+// Функция для завершения задачи (удаления из стека)
+function completeTask() {
+  while (taskStack.length > 0) {
+    let completedTask = taskStack.pop();
+    console.log(`Задача "${completedTask}" завершена и удалена из списка`);
+  }
+  if (taskStack.length === 0) {
+    console.log('В стеке задач нет элементов');
+  }
+}
+
+// Пример использования стека для управления задачами
+addTask('Почистить кухню');
+addTask('Погулять с собакой');
+addTask('Записаться на курс');
+completeTask();
+completeTask();
+completeTask();
+completeTask();
+
+
+
+//CALLBACK
+function orderPizza(pizzaType, callback) {
+  console.log(`Заказ пиццы: ${pizzaType}`);
+  // ... (имитация приготовления пиццы)
+  setTimeout(() => {
+    callback(`Пицца ${pizzaType} готова!`);
+  }, 3000);
+}
+
+orderPizza("Маргарита", function(xuyna) {
+  console.log(xuyna);
+});
+
+//PROMISE
+// Создаем Promise, который выполняет асинхронную операцию (здесь имитируется задержка с помощью setTimeout)
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+      const randomNumber = Math.random();
+      if (randomNumber > 0.5) {
+          resolve(randomNumber); // Если случайное число больше 0.5, успешно завершаем Promise
+      } else {
+          reject(new Error('Number is too low')); // Если число меньше или равно 0.5, отклоняем Promise с ошибкой
+      }
+  }, 1000); // Имитация асинхронной операции, которая завершится через 1 секунду
+});
+
+// Используем Promise с помощью методов then() и catch()
+myPromise
+  .then((result) => {
+      console.log('Promise выполнен успешно:', result); // Выводим результат, если Promise выполнен успешно
+  })
+  .catch((error) => {
+      console.error('Ошибка при выполнении Promise:', error); // Выводим ошибку, если Promise был отклонен
+  });
